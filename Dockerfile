@@ -1,6 +1,6 @@
 FROM quay.io/loyalty_nz/service_base_ruby:2.4.2
 
-# Additional debian package installs go here
+# Install figlet
 RUN apt-get update && apt-get install -y --no-install-recommends figlet
 
 # Install 'entr'
