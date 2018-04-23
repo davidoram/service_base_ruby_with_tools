@@ -1,9 +1,11 @@
 FROM quay.io/loyalty_nz/service_base_ruby:2.4.2
 
-# Install figlet
-RUN apt-get update && apt-get install -y --no-install-recommends figlet
+# Install figlet & ag (The silver surfer)
+# - 'figlet - for printing banners
+# - 'ag' - for fast detection of file changes
+RUN apt-get update && apt-get install -y --no-install-recommends figlet silversearcher-ag
 
-# Install 'entr'
+# Install 'entr' for restarting applications when files modified
 RUN cd /tmp && \
   wget http://entrproject.org/code/entr-4.0.tar.gz && \
   gunzip entr-4.0.tar.gz && \

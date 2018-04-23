@@ -1,11 +1,16 @@
-To build:
+To build & tag:
 
-`docker build -t davidoram/service_base_ruby_with_tools:2.4.2 .`
+`docker build -t davidoram/service_base_ruby_with_tools:<tag> .`
 
 To publish
 
 ```
 docker login
-docker push davidoram/service_base_ruby_with_tools:2.4.2
+```
+Push the image:
+
+
+```
+docker push davidoram/web-service_base_ruby_with_tools:<tag>
 ```
 
